@@ -1,8 +1,11 @@
 import React from "react";
 import axios from "axios";
 import "../componentsStyles/dashboard_quiz_entry.css";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard_quiz_entry(props) {
+  const Navigate = useNavigate();
+
   const { user_id, name, id, update_upvar } = props;
 
   const ondelete = () => {
@@ -24,6 +27,9 @@ function Dashboard_quiz_entry(props) {
     alert("Quiz Deleted");
   };
 
+  const onAdd = () => {
+    Navigate("/AddQuestions", { replace: true, state: { id } });
+  };
   return (
     <div className="card-body dashcard_css">
       <div className="card detail-card dashinner_card_css">
@@ -34,7 +40,10 @@ function Dashboard_quiz_entry(props) {
             <button className="col-md-2 dashrow_rank btn btn-primary">
               View LeaderBoard
             </button>
-            <button className="col-md-2 dashrow_rank btn btn-success ">
+            <button
+              className="col-md-2 dashrow_rank btn btn-success "
+              onClick={onAdd}
+            >
               Add Questions
             </button>
             <button

@@ -26,6 +26,7 @@ export const createQuiz = async (req, res) => {
 };
 
 export const addQuestion = async (req, res) => {
+  console.log("iahviabaijdbdiobdaijdb");
   const {
     quiz_id,
     question,
