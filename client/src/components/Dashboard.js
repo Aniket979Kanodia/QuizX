@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/jsx-pascal-case */
 import React, { useEffect, useState } from "react";
 import Dashboard_card from "./Dashboard_card";
 import Dashboard_quiz_entry from "./Dashboard_quiz_entry";
